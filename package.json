@@ -6,7 +6,7 @@
     "clean/js": "rimraf dist/assets/js && mkdir -p dist/assets/js",
     "clean/images": "rimraf dist/assets/images && mkdir -p dist/assets/images",
     "html/ejscli": "ejs-cli --base-dir src/assets/ejs '**/*.ejs' --out dist",
-    "css/sass": "node-sass src/assets/sass/style.scss -o dist/assets/css --output-style expanded --source-map dist/assets/css",
+    "css/sass": "sass src/assets/sass/style.scss dist/assets/css/style.css",
     "css/postcss": "postcss dist/assets/css/style.css -o dist/assets/css/style.min.css",
     "js/rollup": "rollup src/assets/js/common.js -c=rollup.config.js",
     "js/uglifyjs": "uglifyjs dist/assets/js/*.js -o dist/assets/js/common.min.js",
@@ -35,7 +35,6 @@
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^10.0.1",
-    "node-sass": "^8.0.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "postcss-cli": "^10.0.0",
@@ -43,6 +42,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "sass": "^1.56.1",
     "uglify-js": "^3.17.4",
     "watch": "^1.0.2"
   }
