@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <% var myParam = 'Hello! EJS!'; %>
+    <%- include('partials/head'); %>
+    <%
+      var title = 'タイトルが入ります';
+      var description = 'ディスクリプションが入ります';
+      var siteName = 'サイト名が入ります';
+      var url = 'http://www.sample.com';
+    %>
+    <title><%- title %></title>
+    <meta name="description" content="<%- description %>">
 
-    <p><%= myParam %></p>
-    OK! great! adsfasd
+    <!-- OGP共通項目 -->
+    <meta property="og:type" content="WEBsite">
+    <meta property="og:title" content="<%- title %>">
+    <meta property="og:url" content="<%- url %>">
+    <meta property="og:description" content="<%- description %>">
+    <meta property="og:image" content="<%- url %>/img/">
+    <meta property="og:site_name" content="<%- siteName %>">
+
+    <!-- Twitter用 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@twitter_name">
+    <meta name="twitter:title" content="<%- title %>">
+    <meta name="twitter:url" content="<%- url %>">
+    <meta name="twitter:description" content="<%- description %>">
+
+    <link rel="canonical" href="<%- url %>">
+    <link rel="icon" href="<%- url %>/img/favicon.png">
+    <link rel="apple-touch-icon" href="<%- url %>/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+
+
+  <body>
+    <%- include('partials/header', { active: 'top' }); %>
+
+    コンテンツが入ります！
+
+    <%- include('partials/footer'); %>
+
+    <%- include('partials/common_js'); %>
   </body>
 </html>
