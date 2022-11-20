@@ -5,7 +5,7 @@
     "clean/css": "rimraf dist/assets/css && mkdir -p dist/assets/css",
     "clean/js": "rimraf dist/assets/js && mkdir -p dist/assets/js",
     "clean/images": "rimraf dist/assets/images && mkdir -p dist/assets/images",
-    "html/ejscli": "ejs-cli --base-dir src/assets/ejs '**/*.ejs' --out dist",
+    "html/ejscli": "ejs-cli --base-dir src/assets/ejs --exclude 'partials/' '**/*.ejs' --out dist",
     "css/sass": "sass src/assets/sass/style.scss dist/assets/css/style.css",
     "css/postcss": "postcss dist/assets/css/style.css -o dist/assets/css/style.min.css",
     "js/rollup": "rollup src/assets/js/common.js -c=rollup.config.js",
