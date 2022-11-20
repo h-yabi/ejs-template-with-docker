@@ -3,7 +3,6 @@ version: '3'
 services:
   front:
     build: ./
-    command: npm ci
     tty: true
     volumes:
       - ./:/code
