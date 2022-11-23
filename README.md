@@ -1,6 +1,6 @@
 # ejs-template-with-docker
 
-ejs, scss, docker を使用した Web サイト制作用テンプレート
+ejs, scss, jQuery, docker を使用した Web サイト制作用テンプレート
 
 # 使い方
 
