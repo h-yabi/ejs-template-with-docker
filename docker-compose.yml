@@ -5,6 +5,6 @@ services:
     build: ./
     tty: true
     volumes:
-      - ./:/code
+      - ./:/code:delegated
     ports:
       - '3000:3000'
